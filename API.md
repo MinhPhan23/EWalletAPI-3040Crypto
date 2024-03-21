@@ -4,11 +4,10 @@
 - GET api/user/
 - GET api/user/{user-id}/
 - GET api/user/{user-id}/transaction/
-- GET api/user/{user-id}/transaction/{trans-id}
 
 # Resources
 
-``` python
+``` json
 {
     "user" : {
         "user-id" : 12,
@@ -35,6 +34,30 @@
 
 # Sample
 
-## Requests
+## Get information of all user
 
-## Response
+### Request
+
+```bash
+curl https://3040Crypto/api/user/
+```
+
+### Response
+
+## Get information of a specific user
+
+### Request
+
+```bash
+curl https://3040Crypto/api/user/1
+```
+
+### Response
+
+## Get all transaction from a specific user
+
+``` bash
+curl https://3040Crypto/api/user/1/transaction
+```
+
+### Response
