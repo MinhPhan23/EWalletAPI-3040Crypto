@@ -1,11 +1,20 @@
 # Introduction
 
-# List of endpoint
-- GET api/user/
-- GET api/user/{user-id}/
-- GET api/user/{user-id}/transaction/
+The 3040Crypto User API provides access to user information and transaction history for this cryptocurrency platform. Developers can use this API to retrieve details about users and their associated transactions.
 
-# Resources
+
+# List of endpoints
+### 1. `api/user/`
+-  Retrieves information about all users registered on the platform.
+
+### 2. `api/user/{user-id}/`
+- Retrieves information about a specific user based on their User ID.
+
+### 3. `GET api/user/{user-id}/transaction/`
+- Retrieves transaction history for a specific user based on their User ID.
+
+
+# Description of Resources
 
 ``` json
 {
@@ -30,14 +39,14 @@
 }
 ```
 
-# Sample
+# Sample Requests and Responses
 
-## Get information of all user
+## 1. Get information of all user
 
 ### Request
 
 ```bash
-curl https://3040Crypto/api/user/
+curl -X GET https://3040Crypto/api/user/
 ```
 
 ### Response
@@ -64,12 +73,12 @@ Content-Type: application/json
 }
 ```
 
-## Get information of a specific user
+## 2. Get information of a specific user
 
 ### Request
 
 ```bash
-curl https://3040Crypto/api/user/1
+curl -X GET https://3040Crypto/api/user/1
 ```
 
 ### Response
@@ -86,10 +95,12 @@ Content-Type: application/json
 }
 ```
 
-## Get all transaction from a specific user
+## 3. Get all transaction from a specific user
+
+### Request
 
 ``` bash
-curl https://3040Crypto/api/user/1/transaction
+curl -X GET https://3040Crypto/api/user/1/transaction
 ```
 
 ### Response
@@ -119,3 +130,8 @@ Content-Type: application/json
     ]
 }
 ```
+
+## Contributors
+- [Dhairya Prajapati](https://github.com/dhairyahp15)
+- [Huzaifa Mehboob](https://github.com/Huzzaifaa)
+- [Minh Phan](https://github.com/MinhPhan23)
