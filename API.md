@@ -1,9 +1,11 @@
-# Introduction
+# API Documentation for 3040 Crypto User API
 
-The 3040Crypto User API provides access to user information and transaction history for this cryptocurrency platform. Developers can use this API to retrieve details about users and their associated transactions.
+## Introduction
+
+With the 3040 Crypto User API, users can get their data and transaction histories in relation to the platform. Developers can use this API to retrieve details about users and their associated transactions.
 
 
-# List of endpoints
+## List of endpoints
 ### 1. `api/user/`
 -  Retrieves information about all users registered on the platform.
 
@@ -14,7 +16,7 @@ The 3040Crypto User API provides access to user information and transaction hist
 - Retrieves transaction history for a specific user based on their User ID.
 
 
-# Description of Resources
+## Description of Resources
 
 ``` json
 {
@@ -39,17 +41,17 @@ The 3040Crypto User API provides access to user information and transaction hist
 }
 ```
 
-# Sample Requests and Responses
+## Sample Requests and Responses
 
-## 1. Get information of all user
+### 1. Get information of all user
 
-### Request
+#### Request
 
 ```bash
 curl -X GET https://3040Crypto/api/user/
 ```
 
-### Response
+#### Response
 
 ``` json
 200 OK
@@ -73,15 +75,15 @@ Content-Type: application/json
 }
 ```
 
-## 2. Get information of a specific user
+### 2. Get information of a specific user
 
-### Request
+#### Request
 
 ```bash
 curl -X GET https://3040Crypto/api/user/1
 ```
 
-### Response
+#### Response
 
 ``` json
 200 OK
@@ -95,25 +97,21 @@ Content-Type: application/json
 }
 ```
 
-## 3. Get all transaction from a specific user
+### 3. Get all transaction from a specific user
 
-### Request
+#### Request
 
 ``` bash
 curl -X GET https://3040Crypto/api/user/1/transaction
 ```
 
-### Response
+#### Response
 
 ``` json
 200 OK
 Content-Type: application/json
 
 {
-    "user-id" : 1,
-    "name" : "Minh",
-    "email" : "sth@umanitoba.ca",
-    "dob" : "20/01/1960",
     "transaction" : [
         {
             "trans-id" : 1,
@@ -131,7 +129,7 @@ Content-Type: application/json
 }
 ```
 
-## Contributors
+### Contributors
 - [Dhairya Prajapati](https://github.com/dhairyahp15)
 - [Huzaifa Mehboob](https://github.com/Huzzaifaa)
 - [Minh Phan](https://github.com/MinhPhan23)
